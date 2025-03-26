@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef> Select </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="selectElement(element)" [disabled]="selectedElements.length >= 3 && !selectedElements.includes(element)">
+              <mat-icon [ngClass]="{'selected-icon': selectedElements.includes(element)}">check_circle</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  
+    <div class="list-container">
+      <h3>Selected Elements (Max 3)</h3>
+      <mat-list>
+        <mat-list-item  *ngFor="let element of selectedElements">
+          <span class="text-white">{{element.position}} - {{element.name}}</span>
+          <button mat-icon-button (click)="removeElement(element)">
+            <mat-icon class="text-white">delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>

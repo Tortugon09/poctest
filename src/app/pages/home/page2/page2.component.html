@@ -1,0 +1,17 @@
+  <div class="dashboard-container">
+    <!-- Sección superior con gráfica y descripción corta -->
+    <div class="row">
+      <!-- Card de Gráfica -->
+      <div class="card chart-card">
+        <app-multi-axis-chart 
+        [seriesData]="chartData"
+        [xAxisCategories]="['Ene', 'Feb', 'Mar', 'Abr']">
+      </app-multi-axis-chart>
+      </div>
+    
+    <!-- Card de Descripción Larga -->
+    <div class="card full-width-card">
+      <h3 class="card-title">{{ descripcionLarga.title }}</h3>
+      <p class="card-content">{{ descripcionLarga.content }}</p>
+    </div>
+  </div>

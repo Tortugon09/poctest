@@ -1,0 +1,22 @@
+<mat-card class="cardWithShadow theme-card" style="width: 100%;">
+  <mat-card-content class="b-t-1" style="width: 100%; overflow: auto;">
+    <apx-chart
+      [series]="barChartOptions.series"
+      [chart]="barChartOptions.chart"
+      [xaxis]="barChartOptions.xaxis"
+      [yaxis]="barChartOptions.yaxis"
+      [grid]="barChartOptions.grid"
+      [stroke]="barChartOptions.stroke"
+      [tooltip]="barChartOptions.tooltip"
+      [dataLabels]="barChartOptions.dataLabels"
+      [legend]="barChartOptions.legend"
+      [colors]="barChartOptions.colors"
+      [plotOptions]="barChartOptions.plotOptions"
+    >
+    </apx-chart>
+    <!-- Mostrar la información seleccionada -->
+    <div *ngIf="selectedBarInfo" style="margin-top: 20px; text-align: center;">
+      <strong>Información seleccionada:</strong> {{ selectedBarInfo }}
+    </div>
+  </mat-card-content>
+</mat-card>

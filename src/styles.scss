@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+app-hamburger-menu {
+    .mat-toolbar, .mat-sidenav {
+      background-color: #19103A !important;
+      color: white !important;
+      border: none;
+    }
+    
+    .mat-nav-list .mat-list-item {
+      color: white !important;
+    }
+  }

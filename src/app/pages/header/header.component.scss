@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #19103A !important; /* Color negro */
+    color: white; /* Color del texto */
+  
+    .logo {
+      display: flex;
+      align-items: center;
+  
+      .logo-img {
+        height: 50px;
+      }
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .social-icons button {
+      color: white;
+    }
+  }
+
+  .custom-toolbar {
+    background-color: #000000;
+    color: white;
+  }

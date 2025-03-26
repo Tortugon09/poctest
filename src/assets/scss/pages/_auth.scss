@@ -1,0 +1,176 @@
+.blank-layout-container {
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  align-items: center;
+}
+
+.auth-title {
+  font-size: 66px;
+  line-height: 44px;
+}
+
+.bg-gredient {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    background: radial-gradient(
+        rgb(210, 241, 223),
+        rgb(211, 215, 250),
+        rgb(186, 216, 244)
+      )
+      0% 0% / 400% 400%;
+    animation: 15s ease 0s infinite normal none running gradient;
+    z-index: -1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.img-height {
+  height: calc(100vh - 83px);
+}
+
+.custom-row {
+  &.row {
+    margin-right: -8px;
+    margin-left: -8px;
+    .col-2,
+    .col-12 {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.or-border {
+  position: relative;
+  text-align: center;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100px;
+    top: 50%;
+    height: 1px;
+    background: $borderColor;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100px;
+    top: 50%;
+    height: 1px;
+    background: $borderColor;
+  }
+}
+
+.boxed-auth {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.max-width-form {
+  max-width: 450px;
+}
+
+.mat-mdc-form-field.mat-form-field-invalid {
+  .mdc-notched-outline__leading,
+  .mdc-notched-outline__notch,
+  .mdc-notched-outline__trailing {
+    border-color: $error !important;
+  }
+}
+
+.error-msg {
+  position: absolute;
+  top: -19px;
+  right: 3px;
+}
+
+.circle-top {
+  position: absolute;
+  top: -12%;
+  left: -6%;
+  height: 700px;
+  width: 700px;
+  display: block;
+  background: transparent;
+  z-index: 1;
+}
+
+.circle-top-right {
+  position: absolute;
+  top: -5%;
+  right: 5%;
+  height: 200px;
+  width: 200px;
+  display: block;
+  background: transparent;
+  z-index: 1;
+}
+
+.button-auth{
+  border-radius: 25px;
+  max-height: 50px;
+  border-width: 0px;
+  background-color: #FC4712;
+  &:hover {
+    background-color: #d93c0f; // Un tono más oscuro para el hover
+  }
+}
+
+.circle-bottom {
+  position: absolute;
+  bottom: -4%;
+  right: -1%;
+  height: 250px;
+  width: 250px;
+  display: block;
+  background: transparent;
+  z-index: 1;
+}
+
+.image-bottom {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  height: 50%;
+  width: 60%;
+  display: block;
+  background: transparent;
+  z-index: 1;
+}
+
+.auth-card {
+  max-width: 460px !important;
+}
+
+.h-n80 {
+  height: calc(100vh - 80px);
+}
+
+.auth-bg {
+  background: url(/assets/images/backgrounds/login-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.auth-login {
+  max-width: 1160px;
+}

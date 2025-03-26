@@ -1,0 +1,56 @@
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+.cardWithShadow.theme-card {
+  background: none; 
+  box-shadow: none; ;
+}
+
+mat-stepper {
+  background: none;
+}
+
+mat-card-content {
+  background: none; 
+  padding: 0; 
+}
+
+ng-template {
+  color: white;
+}
+
+
+.mat-step-header .mat-step-label {
+  color: #ff5722; 
+}
+
+
+.mat-stepper-horizontal-line {
+  border-top-color: #ff5722; 
+}
+
+.mat-step-header .mat-step-icon {
+  background-color: #ff5722; 
+}
+
+.mat-step-text-label {
+  color: red;
+}
+.color {
+  color: white;
+}
+
+.mat-step-header .mat-step-label{
+  color: rgba(0, 0, 0, .54)
+}
+.mat-step-header .mat-step-icon {
+  color: rgba(0, 0, 0, .54);
+  background-color: transparent;
+}
+::ng-deep .mat-horizontal-stepper-header-container .mat-stepper-horizontal-line {
+  border-top-color: white;
+}

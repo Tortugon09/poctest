@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+    <!-- Sección superior con gráfica y descripción corta -->
+    <div class="row">
+      <!-- Card de Gráfica -->
+      <div class="card chart-card">
+        <app-grafica-pastel [chartOptions]="chartOptions"></app-grafica-pastel>
+      </div>
+      
+      <!-- Card de Descripción Corta -->
+      <div class="card description-card">
+        <h3 class="card-title">{{ descripcionCorta.title }}</h3>
+        <p class="card-content">{{ descripcionCorta.content }}</p>
+      </div>
+    </div>
+  
+    <!-- Card de Descripción Larga -->
+    <div class="card full-width-card">
+      <h3 class="card-title">{{ descripcionLarga.title }}</h3>
+      <p class="card-content">{{ descripcionLarga.content }}</p>
+    </div>
+  </div>
